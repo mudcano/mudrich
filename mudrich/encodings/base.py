@@ -1,6 +1,6 @@
 from typing import Optional, Union, Dict
-from rich.color import Color
-from rich.style import Style
+from mudrich.color import Color
+from mudrich.style import Style
 
 
 class ProtoStyle:

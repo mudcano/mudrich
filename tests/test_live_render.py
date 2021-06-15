@@ -1,8 +1,8 @@
 import pytest
-from rich.live_render import LiveRender
-from rich.console import Console, ConsoleDimensions, ConsoleOptions
-from rich.style import Style
-from rich.segment import Segment
+from mudrich.live_render import LiveRender
+from mudrich.console import Console, ConsoleDimensions, ConsoleOptions
+from mudrich.style import Style
+from mudrich.segment import Segment
 
 
 @pytest.fixture

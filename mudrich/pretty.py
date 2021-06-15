@@ -79,7 +79,7 @@ def install(
         max_string (int, optional): Maximum length of string before truncating, or None to disable. Defaults to None.
         expand_all (bool, optional): Expand all containers. Defaults to False
     """
-    from rich import get_console
+    from mudrich import get_console
 
     from .console import ConsoleRenderable  # needed here to prevent circular import
 
@@ -782,6 +782,6 @@ if __name__ == "__main__":  # pragma: no cover
     }
     data["foo"].append(data)  # type: ignore
 
-    from rich import print
+    from mudrich import print
 
     print(Pretty(data, indent_guides=True, max_string=20))

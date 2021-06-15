@@ -43,7 +43,7 @@ python -m rich
 För att enkelt lägga till rich utmatning i din applikation, kan du importera [rich print](https://rich.readthedocs.io/en/latest/introduction.html#quick-start) metoden, vilket har den samma signatur som den inbyggda Python funktionen. Testa detta:
 
 ```python
-from rich import print
+from mudrich import print
 
 print("Hello, [bold magenta]World[/bold magenta]!", ":vampire:", locals())
 ```
@@ -55,7 +55,7 @@ print("Hello, [bold magenta]World[/bold magenta]!", ":vampire:", locals())
 Rich kan installeras i Python REPL, så att varje datastruktur kommer att skrivas ut fint och markeras. 
 
 ```python
->>> from rich import pretty
+>>> from mudrich import pretty
 >>> pretty.install()
 ```
 
@@ -66,7 +66,7 @@ Rich kan installeras i Python REPL, så att varje datastruktur kommer att skriva
 För mer kontroll över rich terminal innehållsutmatning, importera och konstruera ett [Console](https://rich.readthedocs.io/en/latest/reference/console.html#rich.console.Console) objekt.
 
 ```python
-from rich.console import Console
+from mudrich.console import Console
 
 console = Console()
 ```
@@ -105,7 +105,7 @@ Rich har en [inspektionsfunktion](https://rich.readthedocs.io/en/latest/referenc
 
 ```python
 >>> my_list = ["foo", "bar"]
->>> from rich import inspect
+>>> from mudrich import inspect
 >>> inspect(my_list, methods=True)
 ```
 
@@ -125,7 +125,7 @@ Klicka på följande rubriker för detaljer:
 `Console` objektet har en `log()` metod vilket har liknande gränssnitt som `print()`, men framställer även en kolumn för den nuvarande tid och fil samt rad vilket gjorde anroppet. Som standard kommer Rich att markera syntax för Python strukturer och för repr strängar. Ifall du loggar en samling (det vill säga en ordbok eller en lista) kommer Rich att finskriva ut det så att det passar i det tillgängliga utrymme. Här är ett exempel av dessa funktioner.
 
 ```python
-from rich.console import Console
+from mudrich.console import Console
 console = Console()
 
 test_data = [
@@ -191,8 +191,8 @@ Animationen ovan genererades utav [table_movie.py](https://github.com/willmcguga
 Här är ett exempel av en enklare tabell:
 
 ```python
-from rich.console import Console
-from rich.table import Table
+from mudrich.console import Console
+from mudrich.table import Table
 
 console = Console()
 
@@ -240,7 +240,7 @@ Rich kan framställa flera flimmerfria [framstegsfält](https://rich.readthedocs
 För grundläggande användning, slå in valfri sekvens i `track` funktion och iterera över resultatet. Här är ett exempel:
 
 ```python
-from rich.progress import track
+from mudrich.progress import track
 
 for step in track(range(100)):
     do_step(step)
@@ -265,7 +265,7 @@ För situationer där det är svårt att beräkna framsteg, kan du använda [sta
 
 ```python
 from time import sleep
-from rich.console import Console
+from mudrich.console import Console
 
 console = Console()
 tasks = [f"task {n}" for n in range(1, 11)]
@@ -321,8 +321,8 @@ Rich kan framställa innehåll i prydliga [kolumner](https://rich.readthedocs.io
 import os
 import sys
 
-from rich import print
-from rich.columns import Columns
+from mudrich import print
+from mudrich.columns import Columns
 
 directory = os.listdir(sys.argv[1])
 print(Columns(directory))
@@ -342,8 +342,8 @@ Rich kan framställa [märkspråk](https://rich.readthedocs.io/en/latest/markdow
 För att framställa märkspråk importera `Markdown` klassen och konstruera den med en sträng innehållandes märkspråkskod. Mata sedan ut det till konsolen. Här är ett exempel:
 
 ```python
-from rich.console import Console
-from rich.markdown import Markdown
+from mudrich.console import Console
+from mudrich.markdown import Markdown
 
 console = Console()
 with open("RICH_README.md") as readme:
@@ -363,8 +363,8 @@ Detta kommer att producera utmatning som liknar följande:
 Rich använder [pygments](https://pygments.org/) biblioteket för att implementera [syntax markering](https://rich.readthedocs.io/en/latest/syntax.html). Användningen är liknande till framställa märkspråk; konstruera ett `Syntax` objekt och skriv ut den till konsolen. Här är ett exempel:
 
 ```python
-from rich.console import Console
-from rich.syntax import Syntax
+from mudrich.console import Console
+from mudrich.syntax import Syntax
 
 my_code = '''
 def iter_first_last(values: Iterable[T]) -> Iterable[Tuple[bool, bool, T]]:

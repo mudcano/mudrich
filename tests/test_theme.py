@@ -4,8 +4,8 @@ import tempfile
 
 import pytest
 
-from rich.style import Style
-from rich.theme import Theme, ThemeStack, ThemeStackError
+from mudrich.style import Style
+from mudrich.theme import Theme, ThemeStack, ThemeStackError
 
 
 def test_inherit():

@@ -4,9 +4,9 @@ Demonstration of Console.screen()
 
 from time import sleep
 
-from rich.align import Align
-from rich.console import Console
-from rich.panel import Panel
+from mudrich.align import Align
+from mudrich.console import Console
+from mudrich.panel import Panel
 
 console = Console()
 

@@ -14,7 +14,7 @@ pprint method
 
 The :func:`~rich.pretty.pprint` method offers a few more arguments you can use to tweak how objects are pretty printed. Here's how you would import it::
 
-    >>> from rich.pretty import pprint
+    >>> from mudrich.pretty import pprint
     >>> pprint(locals())
 
 Indent guides
@@ -52,9 +52,9 @@ Rich offers a :class:`~rich.pretty.Pretty` class which you can user to insert pr
 
 The following example displays pretty printed data within a simple panel::
 
-    from rich import print
-    from rich.pretty import Pretty
-    from rich.panel import Panel
+    from mudrich import print
+    from mudrich.pretty import Pretty
+    from mudrich.panel import Panel
 
     pretty = Pretty(locals())
     panel = Panel(pretty)

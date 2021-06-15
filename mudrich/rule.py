@@ -104,7 +104,7 @@ class Rule(JupyterMixin):
 
 
 if __name__ == "__main__":  # pragma: no cover
-    from rich.console import Console
+    from mudrich.console import Console
     import sys
 
     try:

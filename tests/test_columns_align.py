@@ -2,10 +2,10 @@
 
 import io
 
-from rich import box
-from rich.columns import Columns
-from rich.console import Console
-from rich.panel import Panel
+from mudrich import box
+from mudrich.columns import Columns
+from mudrich.console import Console
+from mudrich.panel import Panel
 
 
 def render():

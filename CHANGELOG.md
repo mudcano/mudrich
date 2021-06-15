@@ -1160,7 +1160,7 @@ Major version bump for a breaking change to `Text.stylize signature`, which corr
 
 ### Fixed
 
-- Removed debug print from rich.progress
+- Removed debug print from mudrich.progress
 
 ## [0.8.11] - 2020-04-14
 
@@ -1210,7 +1210,7 @@ Major version bump for a breaking change to `Text.stylize signature`, which corr
 
 ### Added
 
-- Experimental Jupyter notebook support: from rich.jupyter import print
+- Experimental Jupyter notebook support: from mudrich.jupyter import print
 
 ## [0.8.5] - 2020-03-29
 

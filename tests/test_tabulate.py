@@ -1,7 +1,7 @@
 import itertools
-from rich.style import Style
-from rich.table import _Cell
-from rich.tabulate import tabulate_mapping
+from mudrich.style import Style
+from mudrich.table import _Cell
+from mudrich.tabulate import tabulate_mapping
 
 
 def test_tabulate_mapping():

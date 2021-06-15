@@ -31,8 +31,8 @@ The ``__rich_console__`` method should accept a :class:`~rich.console.Console` a
 Here's an example of a ``__rich_console__`` method::
 
     from dataclasses import dataclass
-    from rich.console import Console, ConsoleOptions, RenderResult
-    from rich.table import Table
+    from mudrich.console import Console, ConsoleOptions, RenderResult
+    from mudrich.table import Table
 
     @dataclass
     class Student:

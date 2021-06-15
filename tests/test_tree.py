@@ -2,9 +2,9 @@ import sys
 
 import pytest
 
-from rich.console import Console
-from rich.measure import Measurement
-from rich.tree import Tree
+from mudrich.console import Console
+from mudrich.measure import Measurement
+from mudrich.tree import Tree
 
 
 def test_render_single_node():

@@ -21,7 +21,7 @@ Basic Usage
 
 For basic usage call the :func:`~rich.progress.track` function, which accepts a sequence (such as a list or range object) and an optional description of the job you are working on. The track method will yield values from the sequence and update the progress information on each iteration. Here's an example::
 
-    from rich.progress import track
+    from mudrich.progress import track
 
     for n in track(range(n), description="Processing..."):
         do_work(n)
@@ -37,7 +37,7 @@ Here's a simple example::
     
     import time
     
-    from rich.progress import Progress
+    from mudrich.progress import Progress
 
     with Progress() as progress:
 
@@ -137,8 +137,8 @@ The following example demonstrates a progress bar where the description takes on
 
     from time import sleep
 
-    from rich.table import Column
-    from rich.progress import Progress, BarColumn, TextColumn
+    from mudrich.table import Column
+    from mudrich.progress import Progress, BarColumn, TextColumn
 
     text_column = TextColumn("{task.description}", table_column=Column(ratio=1))
     bar_column = BarColumn(bar_width=None, table_column=Column(ratio=2))
@@ -182,8 +182,8 @@ Customizing
 
 If the :class:`~rich.progress.Progress` class doesn't offer exactly what you need in terms of a progress display, you can override the :class:`~rich.progress.Progress.get_renderables` method. For example, the following class will render a :class:`~rich.panel.Panel` around the progress display::
 
-    from rich.panel import Panel
-    from rich.progress import Progress
+    from mudrich.panel import Panel
+    from mudrich.progress import Progress
 
     class MyProgress(Progress):
         def get_renderables(self):

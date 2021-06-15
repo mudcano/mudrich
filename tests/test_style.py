@@ -1,8 +1,8 @@
 import pytest
 
-from rich.color import Color, ColorSystem, ColorType
-from rich import errors
-from rich.style import Style, StyleStack
+from mudrich.color import Color, ColorSystem, ColorType
+from mudrich import errors
+from mudrich.style import Style, StyleStack
 
 
 def test_str():

@@ -10,7 +10,7 @@ else:
 from ._loop import loop_last
 
 if TYPE_CHECKING:
-    from rich.console import ConsoleOptions
+    from mudrich.console import ConsoleOptions
 
 
 class Box:
@@ -432,8 +432,8 @@ LEGACY_WINDOWS_SUBSTITUTIONS = {
 
 if __name__ == "__main__":  # pragma: no cover
 
-    from rich.columns import Columns
-    from rich.panel import Panel
+    from mudrich.columns import Columns
+    from mudrich.panel import Panel
 
     from . import box
     from .console import Console

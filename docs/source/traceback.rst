@@ -20,7 +20,7 @@ Traceback handler
 
 Rich can be installed as the default traceback handler so that all uncaught exceptions will be rendered with highlighting. Here's how::
 
-    from rich.traceback import install
+    from mudrich.traceback import install
     install()
 
 There are a few options to configure the traceback handler, see :func:`~rich.traceback.install` for details.

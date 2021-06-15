@@ -3,9 +3,9 @@ import io
 from time import process_time
 from typing import Any
 
-from rich import box
-from rich.color import Color
-from rich.console import (
+from mudrich import box
+from mudrich.color import Color
+from mudrich.console import (
     Console,
     ConsoleOptions,
     ConsoleRenderable,
@@ -13,14 +13,14 @@ from rich.console import (
     RenderResult,
     RenderableType,
 )
-from rich.markdown import Markdown
-from rich.measure import Measurement
-from rich.pretty import Pretty
-from rich.segment import Segment
-from rich.style import Style
-from rich.syntax import Syntax
-from rich.table import Table
-from rich.text import Text
+from mudrich.markdown import Markdown
+from mudrich.measure import Measurement
+from mudrich.pretty import Pretty
+from mudrich.segment import Segment
+from mudrich.style import Style
+from mudrich.syntax import Syntax
+from mudrich.table import Table
+from mudrich.text import Text
 
 
 class ColorBox:
@@ -238,7 +238,7 @@ if __name__ == "__main__":  # pragma: no cover
 
     print(f"rendered in {taken}ms")
 
-    from rich.panel import Panel
+    from mudrich.panel import Panel
 
     console = Console()
 

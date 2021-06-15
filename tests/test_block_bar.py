@@ -1,5 +1,5 @@
-from rich.bar import Bar
-from rich.console import Console
+from mudrich.bar import Bar
+from mudrich.console import Console
 
 from .render import render
 

@@ -4,6 +4,7 @@ import platform
 import shutil
 import sys
 import threading
+import html
 from abc import ABC, abstractmethod
 from collections import abc
 from dataclasses import dataclass, field
@@ -1025,7 +1026,7 @@ class Console:
         rather than writing it to the console.
 
         Example:
-            >>> from rich.console import Console
+            >>> from mudrich.console import Console
             >>> console = Console()
             >>> with console.capture() as capture:
             ...     console.print("[bold magenta]Hello World[/]")
@@ -1049,8 +1050,8 @@ class Console:
             links (bool, optional): Show links in pager. Defaults to False.
 
         Example:
-            >>> from rich.console import Console
-            >>> from rich.__main__ import make_test_card
+            >>> from mudrich.console import Console
+            >>> from mudrich.__main__ import make_test_card
             >>> console = Console()
             >>> with console.pager():
                     console.print(make_test_card())
@@ -1856,6 +1857,8 @@ class Console:
         if self.no_color and color_system:
             buffer = Segment.remove_color(buffer)
         for text, style, control in buffer:
+            if self._mxp or self._pueblo:
+                text = html.escape(text)
             if style:
                 append(
                     style.render(

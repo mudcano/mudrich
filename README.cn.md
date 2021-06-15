@@ -35,7 +35,7 @@ pip install rich
 您可以试试：
 
 ```python
-from rich import print
+from mudrich import print
 
 print("Hello, [bold magenta]World[/bold magenta]!", ":vampire:", locals())
 ```
@@ -47,7 +47,7 @@ print("Hello, [bold magenta]World[/bold magenta]!", ":vampire:", locals())
 想要对 Rich 终端内容进行更多控制，请您导入并构造一个[控制台](https://rich.readthedocs.io/en/latest/reference/console.html#rich.console.Console)对象。
 
 ```python
-from rich.console import Console
+from mudrich.console import Console
 
 console = Console()
 ```
@@ -85,7 +85,7 @@ console.print("Where there is a [bold cyan]Will[/bold cyan] there [u]is[/u] a [i
 Console 对象具有一个`log()`方法，该方法具有与`print()`类似的界面，除此之外，还能成列显示当前时间以及被调用的文件和行。默认情况下，Rich 将针对 Python 结构和 repr 字符串进行语法突出显示。如果您记录一个集合（如字典或列表），Rich 会把它漂亮地打印出来，使其切合可用空间。下面是其中一些功能的示例：
 
 ```python
-from rich.console import Console
+from mudrich.console import Console
 console = Console()
 
 test_data = [
@@ -137,8 +137,8 @@ log 方法既可用于将长时间运行应用程序（例如服务器）的日�
 Rich 可以使用 Unicode 框字符来呈现多变的[表格](https://rich.readthedocs.io/en/latest/tables.html)。Rich 包含多种边框，样式，单元格对齐等格式设置的选项。下面是一个简单的示例：
 
 ```python
-from rich.console import Console
-from rich.table import Column, Table
+from mudrich.console import Console
+from mudrich.table import Column, Table
 
 console = Console()
 
@@ -183,7 +183,7 @@ Rich 可以渲染多个不闪烁的[进度](https://rich.readthedocs.io/en/lates
 基本用法：用`track`函数调用任何程序并迭代结果。下面是一个例子：
 
 ```python
-from rich.progress import track
+from mudrich.progress import track
 
 for step in track(range(100)):
     do_step(step)
@@ -207,8 +207,8 @@ Rich 可以将内容通过排列整齐的，具有相等或最佳的宽度的[�
 import os
 import sys
 
-from rich import print
-from rich.columns import Columns
+from mudrich import print
+from mudrich.columns import Columns
 
 directory = os.listdir(sys.argv[1])
 print(Columns(directory))
@@ -225,8 +225,8 @@ Rich 可以呈现[markdown](https://rich.readthedocs.io/en/latest/markdown.html)
 为了渲染 markdown，请导入`Markdown`类，并使用包含 markdown 代码的字符串来构造它，然后将其打印到控制台。例子如下：
 
 ```python
-from rich.console import Console
-from rich.markdown import Markdown
+from mudrich.console import Console
+from mudrich.markdown import Markdown
 
 console = Console()
 with open("RICH_README.md") as readme:
@@ -243,8 +243,8 @@ console.print(markdown)
 Rich 使用[pygments](https://pygments.org/)库来实现[语法高亮显示](https://rich.readthedocs.io/en/latest/syntax.html)。用法类似于渲染 markdown。构造一个`Syntax`对象并将其打印到控制台。下面是一个例子：
 
 ```python
-from rich.console import Console
-from rich.syntax import Syntax
+from mudrich.console import Console
+from mudrich.syntax import Syntax
 
 my_code = '''
 def iter_first_last(values: Iterable[T]) -> Iterable[Tuple[bool, bool, T]]:

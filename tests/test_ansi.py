@@ -1,9 +1,9 @@
 import io
 
-from rich.ansi import AnsiDecoder
-from rich.console import Console
-from rich.style import Style
-from rich.text import Span, Text
+from mudrich.ansi import AnsiDecoder
+from mudrich.console import Console
+from mudrich.style import Style
+from mudrich.text import Span, Text
 
 
 def test_decode():

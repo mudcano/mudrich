@@ -630,7 +630,7 @@ class Style:
         Returns:
             str: A string containing ANSI style codes.
         """
-        out_text = html.escape(text) if mxp or pueblo else text
+        out_text = text
         if not out_text:
             return out_text
         if color_system is not None:

@@ -188,11 +188,11 @@ class Tree(JupyterMixin):
 
 if __name__ == "__main__":  # pragma: no cover
 
-    from rich.console import RenderGroup
-    from rich.markdown import Markdown
-    from rich.panel import Panel
-    from rich.syntax import Syntax
-    from rich.table import Table
+    from mudrich.console import RenderGroup
+    from mudrich.markdown import Markdown
+    from mudrich.panel import Panel
+    from mudrich.syntax import Syntax
+    from mudrich.table import Table
 
     table = Table(row_styles=["", "dim"])
 

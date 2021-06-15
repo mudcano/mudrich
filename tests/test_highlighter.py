@@ -2,8 +2,8 @@
 import pytest
 from typing import List
 
-from rich.highlighter import NullHighlighter, ReprHighlighter
-from rich.text import Span, Text
+from mudrich.highlighter import NullHighlighter, ReprHighlighter
+from mudrich.text import Span, Text
 
 
 def test_wrong_type():

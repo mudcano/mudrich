@@ -1,5 +1,5 @@
 from time import sleep
-from rich.console import Console
+from mudrich.console import Console
 
 console = Console()
 console.print()

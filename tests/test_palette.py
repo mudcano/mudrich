@@ -1,5 +1,5 @@
-from rich._palettes import STANDARD_PALETTE
-from rich.table import Table
+from mudrich._palettes import STANDARD_PALETTE
+from mudrich.table import Table
 
 
 def test_rich_cast():

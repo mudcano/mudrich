@@ -12,8 +12,8 @@ Creating layouts
 
 To define a layout, construct a Layout object and print it::
 
-    from rich import print
-    from rich.layout import Layout
+    from mudrich import print
+    from mudrich.layout import Layout
 
     layout = Layout()
     print(layout)

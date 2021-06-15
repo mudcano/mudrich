@@ -1,6 +1,6 @@
 import os.path
 import platform
-from rich.containers import Lines
+from mudrich.containers import Lines
 import textwrap
 from abc import ABC, abstractmethod
 from typing import Any, Dict, Iterable, List, Optional, Set, Tuple, Type, Union
@@ -690,7 +690,7 @@ if __name__ == "__main__":  # pragma: no cover
     )
     args = parser.parse_args()
 
-    from rich.console import Console
+    from mudrich.console import Console
 
     console = Console(force_terminal=args.force_color, width=args.width)
 

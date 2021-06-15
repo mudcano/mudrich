@@ -9,9 +9,9 @@ If your terminal supports hyperlinks you should be able to launch files by click
 import os
 import sys
 
-from rich import print
-from rich.columns import Columns
-from rich.text import Text
+from mudrich import print
+from mudrich.columns import Columns
+from mudrich.text import Text
 
 try:
     root_path = sys.argv[1]

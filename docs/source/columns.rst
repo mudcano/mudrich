@@ -8,8 +8,8 @@ The following example is a very basic clone of the ``ls`` command in OSX / Linux
     import os
     import sys
 
-    from rich import print
-    from rich.columns import Columns
+    from mudrich import print
+    from mudrich.columns import Columns
 
     if len(sys.argv) < 2:
         print("Usage: python columns.py DIRECTORY")

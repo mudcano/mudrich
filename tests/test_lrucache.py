@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 
 import unittest
 
-from rich._lru_cache import LRUCache
+from mudrich._lru_cache import LRUCache
 
 
 def test_lru_cache():

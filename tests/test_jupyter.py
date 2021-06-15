@@ -1,4 +1,4 @@
-from rich.console import Console
+from mudrich.console import Console
 
 
 def test_jupyter():

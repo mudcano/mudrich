@@ -21,8 +21,8 @@ To create a live display, construct a :class:`~rich.live.Live` object with a ren
 
     import time
 
-    from rich.live import Live
-    from rich.table import Table
+    from mudrich.live import Live
+    from mudrich.table import Table
 
     table = Table()
     table.add_column("Row ID")
@@ -44,8 +44,8 @@ You can also change the renderable on-the-fly by calling the :meth:`~rich.live.L
     import random
     import time
 
-    from rich.live import Live
-    from rich.table import Table
+    from mudrich.live import Live
+    from mudrich.table import Table
 
 
     def generate_table() -> Table:
@@ -113,8 +113,8 @@ The Live class will create an internal Console object which you can access via `
 
     import time
 
-    from rich.live import Live
-    from rich.table import Table
+    from mudrich.live import Live
+    from mudrich.table import Table
 
     table = Table()
     table.add_column("Row ID")

@@ -1,10 +1,10 @@
 from time import sleep
 
-from rich.columns import Columns
-from rich.panel import Panel
-from rich.live import Live
-from rich.text import Text
-from rich.spinner import Spinner, SPINNERS
+from mudrich.columns import Columns
+from mudrich.panel import Panel
+from mudrich.live import Live
+from mudrich.text import Text
+from mudrich.spinner import Spinner, SPINNERS
 
 all_spinners = Columns(
     [

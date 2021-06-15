@@ -32,7 +32,7 @@ class Screen:
         style: Optional[StyleType] = None,
         application_mode: bool = False,
     ) -> None:
-        from rich.console import RenderGroup
+        from mudrich.console import RenderGroup
 
         self.renderable = RenderGroup(*renderables)
         self.style = style

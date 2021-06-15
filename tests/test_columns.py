@@ -2,8 +2,8 @@
 
 import io
 
-from rich.columns import Columns
-from rich.console import Console
+from mudrich.columns import Columns
+from mudrich.console import Console
 
 COLUMN_DATA = [
     "Ursus americanus",

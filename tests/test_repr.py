@@ -1,7 +1,7 @@
 from typing import Optional
 
-from rich.console import Console
-from rich.repr import rich_repr
+from mudrich.console import Console
+from mudrich.repr import rich_repr
 
 
 @rich_repr

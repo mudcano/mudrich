@@ -1,8 +1,8 @@
 from time import sleep
 
-from rich.console import Console
-from rich.spinner import Spinner
-from rich.status import Status
+from mudrich.console import Console
+from mudrich.spinner import Spinner
+from mudrich.status import Status
 
 
 def test_status():

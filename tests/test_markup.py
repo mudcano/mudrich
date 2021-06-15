@@ -1,8 +1,8 @@
 import pytest
 
-from rich.console import Console
-from rich.markup import escape, MarkupError, _parse, render, Tag, RE_TAGS
-from rich.text import Span
+from mudrich.console import Console
+from mudrich.markup import escape, MarkupError, _parse, render, Tag, RE_TAGS
+from mudrich.text import Span
 
 
 def test_re_no_match():

@@ -43,7 +43,7 @@ python -m rich
 To effortlessly add rich output to your application, you can import the [rich print](https://rich.readthedocs.io/en/latest/introduction.html#quick-start) method, which has the same signature as the builtin Python function. Try this:
 
 ```python
-from rich import print
+from mudrich import print
 
 print("Hello, [bold magenta]World[/bold magenta]!", ":vampire:", locals())
 ```
@@ -55,7 +55,7 @@ print("Hello, [bold magenta]World[/bold magenta]!", ":vampire:", locals())
 Rich can be installed in the Python REPL, so that any data structures will be pretty printed and highlighted.
 
 ```python
->>> from rich import pretty
+>>> from mudrich import pretty
 >>> pretty.install()
 ```
 
@@ -66,7 +66,7 @@ Rich can be installed in the Python REPL, so that any data structures will be pr
 For more control over rich terminal content, import and construct a [Console](https://rich.readthedocs.io/en/latest/reference/console.html#rich.console.Console) object.
 
 ```python
-from rich.console import Console
+from mudrich.console import Console
 
 console = Console()
 ```
@@ -105,7 +105,7 @@ Rich has an [inspect](https://rich.readthedocs.io/en/latest/reference/init.html?
 
 ```python
 >>> my_list = ["foo", "bar"]
->>> from rich import inspect
+>>> from mudrich import inspect
 >>> inspect(my_list, methods=True)
 ```
 
@@ -125,7 +125,7 @@ Click the following headings for details:
 The Console object has a `log()` method which has a similar interface to `print()`, but also renders a column for the current time and the file and line which made the call. By default Rich will do syntax highlighting for Python structures and for repr strings. If you log a collection (i.e. a dict or a list) Rich will pretty print it so that it fits in the available space. Here's an example of some of these features.
 
 ```python
-from rich.console import Console
+from mudrich.console import Console
 console = Console()
 
 test_data = [
@@ -191,8 +191,8 @@ The animation above was generated with [table_movie.py](https://github.com/willm
 Here's a simpler table example:
 
 ```python
-from rich.console import Console
-from rich.table import Table
+from mudrich.console import Console
+from mudrich.table import Table
 
 console = Console()
 
@@ -240,7 +240,7 @@ Rich can render multiple flicker-free [progress](https://rich.readthedocs.io/en/
 For basic usage, wrap any sequence in the `track` function and iterate over the result. Here's an example:
 
 ```python
-from rich.progress import track
+from mudrich.progress import track
 
 for step in track(range(100)):
     do_step(step)
@@ -265,7 +265,7 @@ For situations where it is hard to calculate progress, you can use the [status](
 
 ```python
 from time import sleep
-from rich.console import Console
+from mudrich.console import Console
 
 console = Console()
 tasks = [f"task {n}" for n in range(1, 11)]
@@ -321,8 +321,8 @@ Rich can render content in neat [columns](https://rich.readthedocs.io/en/latest/
 import os
 import sys
 
-from rich import print
-from rich.columns import Columns
+from mudrich import print
+from mudrich.columns import Columns
 
 directory = os.listdir(sys.argv[1])
 print(Columns(directory))
@@ -342,8 +342,8 @@ Rich can render [markdown](https://rich.readthedocs.io/en/latest/markdown.html) 
 To render markdown import the `Markdown` class and construct it with a string containing markdown code. Then print it to the console. Here's an example:
 
 ```python
-from rich.console import Console
-from rich.markdown import Markdown
+from mudrich.console import Console
+from mudrich.markdown import Markdown
 
 console = Console()
 with open("RICH_README.md") as readme:
@@ -363,8 +363,8 @@ This will produce output something like the following:
 Rich uses the [pygments](https://pygments.org/) library to implement [syntax highlighting](https://rich.readthedocs.io/en/latest/syntax.html). Usage is similar to rendering markdown; construct a `Syntax` object and print it to the console. Here's an example:
 
 ```python
-from rich.console import Console
-from rich.syntax import Syntax
+from mudrich.console import Console
+from mudrich.syntax import Syntax
 
 my_code = '''
 def iter_first_last(values: Iterable[T]) -> Iterable[Tuple[bool, bool, T]]:

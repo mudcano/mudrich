@@ -40,7 +40,7 @@ python -m rich
 簡単にリッチな出力をアプリケーションに追加するには、Pythonの組み込み関数と同じ名前を持つ [rich print](https://rich.readthedocs.io/en/latest/introduction.html#quick-start) メソッドをインポートすることで実現できます。こちらを試してみてください:
 
 ```python
-from rich import print
+from mudrich import print
 
 print("Hello, [bold magenta]World[/bold magenta]!", ":vampire:", locals())
 ```
@@ -52,7 +52,7 @@ print("Hello, [bold magenta]World[/bold magenta]!", ":vampire:", locals())
 RichはPythonのREPLでインストールすることができ、データ構造がきれいに表示され、ハイライトされます。
 
 ```python
->>> from rich import pretty
+>>> from mudrich import pretty
 >>> pretty.install()
 ```
 
@@ -63,7 +63,7 @@ RichはPythonのREPLでインストールすることができ、データ構造
 RichにはPythonオブジェクトやクラス、インスタンス、組み込み関数などに関するレポートを作成することができる、[inspect関数](https://rich.readthedocs.io/en/latest/reference/init.html?highlight=inspect#rich.inspect)があります。
 
 ```python
->>> from rich import inspect
+>>> from mudrich import inspect
 >>> inspect(str, methods=True)
 ```
 
@@ -73,7 +73,7 @@ RichにはPythonオブジェクトやクラス、インスタンス、組み込�
 
 
 ```python
-from rich.console import Console
+from mudrich.console import Console
 
 console = Console()
 ```
@@ -112,7 +112,7 @@ console.print("Where there is a [bold cyan]Will[/bold cyan] there [u]is[/u] a [i
 Consoleオブジェクトには `log()` メソッドがあり、これは `print()` と同じインターフェイスを持ちますが、現在の時刻と呼び出しを行ったファイルと行数についてもカラムに表示します。デフォルトでは、RichはPythonの構造体とrepr文字列のシンタックスハイライトを行います。もしコレクション(例: dictやlist)をログに記録した場合、Richはそれを利用可能なスペースに収まるようにきれいに表示します。以下に、これらの機能のいくつかの例を示します。
 
 ```python
-from rich.console import Console
+from mudrich.console import Console
 console = Console()
 
 test_data = [
@@ -170,8 +170,8 @@ Richはユニコードの枠を用いて柔軟に[テーブル](https://rich.rea
 もう少し簡単な表の例を示します:
 
 ```python
-from rich.console import Console
-from rich.table import Table
+from mudrich.console import Console
+from mudrich.table import Table
 
 console = Console()
 
@@ -217,7 +217,7 @@ Richでは複数のちらつきのないの[プログレスバー](https://rich.
 基本的な使い方としては、任意のシーケンスを `track` 関数でラップし、その結果を繰り返し処理します。以下に例を示します:
 
 ```python
-from rich.progress import track
+from mudrich.progress import track
 
 for step in track(range(100)):
     do_step(step)
@@ -239,7 +239,7 @@ for step in track(range(100)):
 
 ```python
 from time import sleep
-from rich.console import Console
+from mudrich.console import Console
 
 console = Console()
 tasks = [f"task {n}" for n in range(1, 11)]
@@ -289,8 +289,8 @@ Rich は、コンテンツをきれいな [カラム](https://rich.readthedocs.i
 import os
 import sys
 
-from rich import print
-from rich.columns import Columns
+from mudrich import print
+from mudrich.columns import Columns
 
 directory = os.listdir(sys.argv[1])
 print(Columns(directory))
@@ -307,8 +307,8 @@ Richは[マークダウン](https://rich.readthedocs.io/en/latest/markdown.html)
 マークダウンを使用するには、`Markdown`クラスをインポートし、マークダウンコードを含む文字列で構成します。そしてそれをコンソールに表示します。これは例です:
 
 ```python
-from rich.console import Console
-from rich.markdown import Markdown
+from mudrich.console import Console
+from mudrich.markdown import Markdown
 
 console = Console()
 with open("RICH_README.md") as readme:
@@ -325,8 +325,8 @@ console.print(markdown)
 Richは [シンタックスハイライト](https://rich.readthedocs.io/en/latest/syntax.html) を実装するために [pygments](https://pygments.org/) ライブラリを使用しています。使い方はマークダウンを使用するのと似ています。 `Syntax` オブジェクトを構築してコンソールに表示します。以下にその例を示します:
 
 ```python
-from rich.console import Console
-from rich.syntax import Syntax
+from mudrich.console import Console
+from mudrich.syntax import Syntax
 
 my_code = '''
 def iter_first_last(values: Iterable[T]) -> Iterable[Tuple[bool, bool, T]]:

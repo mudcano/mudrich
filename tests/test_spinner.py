@@ -1,10 +1,10 @@
 import pytest
 
-from rich.console import Console
-from rich.measure import Measurement
-from rich.rule import Rule
-from rich.spinner import Spinner
-from rich.text import Text
+from mudrich.console import Console
+from mudrich.measure import Measurement
+from mudrich.rule import Rule
+from mudrich.spinner import Spinner
+from mudrich.text import Text
 
 
 def test_spinner_create():

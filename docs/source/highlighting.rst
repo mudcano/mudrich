@@ -12,9 +12,9 @@ If the default highlighting doesn't fit your needs, you can define a custom high
 
 Here's an example which highlights text that looks like an email address::
 
-    from rich.console import Console  
-    from rich.highlighter import RegexHighlighter      
-    from rich.theme import Theme
+    from mudrich.console import Console
+    from mudrich.highlighter import RegexHighlighter
+    from mudrich.theme import Theme
 
     class EmailHighlighter(RegexHighlighter):
         """Apply style to anything that looks like an email."""
@@ -44,8 +44,8 @@ Here's a silly example that highlights every character with a different color::
 
     from random import randint
 
-    from rich import print
-    from rich.highlighter import Highlighter
+    from mudrich import print
+    from mudrich.highlighter import Highlighter
 
 
     class RainbowHighlighter(Highlighter):

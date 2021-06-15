@@ -1,6 +1,6 @@
 if __name__ == "__main__":  # pragma: no cover
-    from rich.console import Console
-    from rich import inspect
+    from mudrich.console import Console
+    from mudrich import inspect
 
     console = Console()
     inspect(console)

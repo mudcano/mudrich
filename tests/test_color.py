@@ -1,4 +1,4 @@
-from rich.color import (
+from mudrich.color import (
     blend_rgb,
     parse_rgb_hex,
     Color,
@@ -7,8 +7,8 @@ from rich.color import (
     ColorType,
     ColorTriplet,
 )
-from rich.style import Style
-from rich.text import Text, Span
+from mudrich.style import Style
+from mudrich.text import Text, Span
 
 import pytest
 

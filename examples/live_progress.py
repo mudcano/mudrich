@@ -6,10 +6,10 @@ Demonstrates the use of multiple Progress instances in a single Live display.
 
 from time import sleep
 
-from rich.live import Live
-from rich.panel import Panel
-from rich.progress import Progress, SpinnerColumn, BarColumn, TextColumn
-from rich.table import Table
+from mudrich.live import Live
+from mudrich.panel import Panel
+from mudrich.progress import Progress, SpinnerColumn, BarColumn, TextColumn
+from mudrich.table import Table
 
 
 job_progress = Progress(

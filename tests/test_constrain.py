@@ -1,6 +1,6 @@
-from rich.console import Console
-from rich.constrain import Constrain
-from rich.text import Text
+from mudrich.console import Console
+from mudrich.constrain import Constrain
+from mudrich.text import Text
 
 
 def test_width_of_none():

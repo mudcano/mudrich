@@ -5,10 +5,10 @@ Use Bar to renderer a sort-of circle.
 """
 import math
 
-from rich.align import Align
-from rich.bar import Bar
-from rich.color import Color
-from rich import print
+from mudrich.align import Align
+from mudrich.bar import Bar
+from mudrich.color import Color
+from mudrich import print
 
 
 SIZE = 40

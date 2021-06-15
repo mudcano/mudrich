@@ -52,8 +52,8 @@ if __name__ == "__main__":
         __rich_repr__.angular = False  # type: ignore
 
     foo = Foo()
-    from rich.console import Console
-    from rich import print
+    from mudrich.console import Console
+    from mudrich import print
 
     console = Console()
 

@@ -1,5 +1,5 @@
-from rich.console import Console
-from rich.screen import Screen
+from mudrich.console import Console
+from mudrich.screen import Screen
 
 
 def test_screen():

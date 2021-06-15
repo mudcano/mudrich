@@ -80,7 +80,7 @@ Style Class
 
 Ultimately the style definition is parsed and an instance of a :class:`~rich.style.Style` class is created. If you prefer, you can use the Style class in place of the style definition. Here's an example::
 
-    from rich.style import Style
+    from mudrich.style import Style
     danger_style = Style(color="red", blink=True, bold=True)
     console.print("Danger, Will Robinson!", style=danger_style)
 
@@ -88,8 +88,8 @@ It is slightly quicker to construct a Style class like this, since a style defin
 
 Styles may be combined by adding them together, which is useful if you want to modify attributes of an existing style. Here's an example::
 
-    from rich.console import Console
-    from rich.style import Style
+    from mudrich.console import Console
+    from mudrich.style import Style
     console = Console()
 
     base_style = Style.parse("cyan")
@@ -112,8 +112,8 @@ Style themes can make your code more semantic, for instance a style called ``"wa
 
 To use a style theme, construct a :class:`~rich.theme.Theme` instance and pass it to the :class:`~rich.console.Console` constructor. Here's an example::
 
-    from rich.console import Console
-    from rich.theme import Theme
+    from mudrich.console import Console
+    from mudrich.theme import Theme
     custom_theme = Theme({
         "info" : "dim cyan",
         "warning": "magenta",
@@ -134,8 +134,8 @@ Customizing Defaults
 
 The Theme class will inherit the default styles builtin to Rich. If your custom theme contains the name of an existing style, it will replace it. This allows you to customize the defaults as easily as you can create your own styles. For instance, here's how you can change how Rich highlights numbers::
 
-    from rich.console import Console
-    from rich.theme import Theme
+    from mudrich.console import Console
+    from mudrich.theme import Theme
     console = Console(theme=Theme({"repr.number": "bold green blink"}))
     console.print("The total is 128")
 

@@ -13,7 +13,7 @@ Console markup uses a syntax inspired by `bbcode <https://en.wikipedia.org/wiki/
 
 Here's a simple example::
 
-    from rich import print
+    from mudrich import print
     print("[bold red]alert![/bold red] Something happened")
 
 If you don't close a style, it will apply until the end of the string. Which is sometimes convenient if you want to style a single line. For example::
@@ -52,7 +52,7 @@ Escaping
 
 Occasionally you may want to print something that Rich would interpret as markup. You can *escape* a tag by preceding it with a backslash. Here's an example::
 
-    >>> from rich import print
+    >>> from mudrich import print
     >>> print(r"foo\[bar]")
     foo[bar]
 
@@ -70,7 +70,7 @@ Escaping is important if you construct console markup dynamically, with ``str.fo
 
 Calling ``greet("Will")`` will print a greeting, but if you were to call ``greet("[blink]Gotcha![/blink]"])`` then you will also get blinking text, which may not be desirable. The solution is to escape the arguments::
 
-    from rich.markup import escape
+    from mudrich.markup import escape
     def greet(name):
         console.print(f"Hello {escape(name)}!")
 

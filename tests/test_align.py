@@ -2,9 +2,9 @@ import io
 
 import pytest
 
-from rich.console import Console
-from rich.align import Align, VerticalCenter
-from rich.measure import Measurement
+from mudrich.console import Console
+from mudrich.align import Align, VerticalCenter
+from mudrich.measure import Measurement
 
 
 def test_bad_align_legal():

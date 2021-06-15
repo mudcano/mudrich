@@ -1,7 +1,7 @@
 import pytest
 from typing import NamedTuple, Optional
 
-from rich._ratio import ratio_reduce, ratio_resolve
+from mudrich._ratio import ratio_reduce, ratio_resolve
 
 
 class Edge(NamedTuple):

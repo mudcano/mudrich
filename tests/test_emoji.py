@@ -1,6 +1,6 @@
 import pytest
 
-from rich.emoji import Emoji, NoEmoji
+from mudrich.emoji import Emoji, NoEmoji
 
 from .render import render
 

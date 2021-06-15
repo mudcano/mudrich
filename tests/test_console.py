@@ -7,9 +7,9 @@ from typing import Optional
 
 import pytest
 
-from rich import errors
-from rich.color import ColorSystem
-from rich.console import (
+from mudrich import errors
+from mudrich.color import ColorSystem
+from mudrich.console import (
     CaptureError,
     Console,
     ConsoleDimensions,
@@ -17,15 +17,15 @@ from rich.console import (
     render_group,
     ScreenUpdate,
 )
-from rich.control import Control
-from rich.measure import measure_renderables
-from rich.pager import SystemPager
-from rich.panel import Panel
-from rich.region import Region
-from rich.segment import Segment
-from rich.status import Status
-from rich.style import Style
-from rich.text import Text
+from mudrich.control import Control
+from mudrich.measure import measure_renderables
+from mudrich.pager import SystemPager
+from mudrich.panel import Panel
+from mudrich.region import Region
+from mudrich.segment import Segment
+from mudrich.status import Status
+from mudrich.style import Style
+from mudrich.text import Text
 
 
 def test_dumb_terminal():

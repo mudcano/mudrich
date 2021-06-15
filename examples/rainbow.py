@@ -6,8 +6,8 @@ This example demonstrates how to write a custom highlighter.
 
 from random import randint
 
-from rich import print
-from rich.highlighter import Highlighter
+from mudrich import print
+from mudrich.highlighter import Highlighter
 
 
 class RainbowHighlighter(Highlighter):

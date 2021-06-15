@@ -1,7 +1,7 @@
 from collections.abc import Mapping
 from typing import Any, Optional
 
-from rich.console import JustifyMethod
+from mudrich.console import JustifyMethod
 
 from . import box
 from .highlighter import ReprHighlighter

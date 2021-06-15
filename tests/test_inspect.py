@@ -3,8 +3,8 @@ import sys
 
 import pytest
 
-from rich import inspect
-from rich.console import Console
+from mudrich import inspect
+from mudrich.console import Console
 
 
 skip_py36 = pytest.mark.skipif(

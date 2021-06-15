@@ -5,9 +5,9 @@ The :class:`~rich.console.RenderGroup` class allows you to group several rendera
 
 To render two panels within a third panel, you would construct a RenderGroup with the *child* renderables as positional arguments then wrap the result in another Panel::
 
-    from rich import print
-    from rich.console import RenderGroup
-    from rich.panel import Panel
+    from mudrich import print
+    from mudrich.console import RenderGroup
+    from mudrich.panel import Panel
 
     panel_group = RenderGroup(
         Panel("Hello", style="on blue"),
@@ -18,9 +18,9 @@ To render two panels within a third panel, you would construct a RenderGroup wit
 
 This pattern is nice when you know in advance what renderables will be in a group, but can get awkward if you have a larger number of renderables, especially if they are dynamic. Rich provides a :func:`~rich.console.render_group` decorator to help with these situations. The decorator builds a render group from an iterator of renderables. The following is the equivalent of the previous example using the decorator::
 
-    from rich import print
-    from rich.console import render_group
-    from rich.panel import Panel
+    from mudrich import print
+    from mudrich.console import render_group
+    from mudrich.panel import Panel
 
     @render_group()
     def get_panels():

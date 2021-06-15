@@ -1,7 +1,7 @@
-from rich.console import Console
-from rich.progress_bar import ProgressBar
-from rich.segment import Segment
-from rich.style import Style
+from mudrich.console import Console
+from mudrich.progress_bar import ProgressBar
+from mudrich.segment import Segment
+from mudrich.style import Style
 
 from .render import render
 

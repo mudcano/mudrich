@@ -44,7 +44,7 @@ python -m rich
 따라해보세요:
 
 ```python
-from rich import print
+from mudrich import print
 
 print("Hello, [bold magenta]World[/bold magenta]!", ":vampire:", locals())
 ```
@@ -56,7 +56,7 @@ print("Hello, [bold magenta]World[/bold magenta]!", ":vampire:", locals())
 Rich는 파이썬 REPL에도 설치할 수 있습니다. 어떤 데이터 구조라도 예쁘게 출력하거나 강조할 수 있습니다.
 
 ```python
->>> from rich import pretty
+>>> from mudrich import pretty
 >>> pretty.install()
 ```
 
@@ -67,7 +67,7 @@ Rich는 파이썬 REPL에도 설치할 수 있습니다. 어떤 데이터 구조
 rich 터미널을 더욱 잘 활용하려면, import 한 뒤 [Console](https://rich.readthedocs.io/en/latest/reference/console.html#rich.console.Console) 객체를 생성해주세요.
 
 ```python
-from rich.console import Console
+from mudrich.console import Console
 
 console = Console()
 ```
@@ -106,7 +106,7 @@ Rich는 class나 instance, builtin 같은 파이썬 객체의 레포트를 생�
 
 ```python
 >>> my_list = ["foo", "bar"]
->>> from rich import inspect
+>>> from mudrich import inspect
 >>> inspect(my_list, methods=True)
 ```
 
@@ -126,7 +126,7 @@ Rich는 CLI에서 우아하게 출력하거나 코드 디버깅을 돕도록 다
 Console 객체는 `print()`와 인터페이스가 유사한 `log()` 메서드를 가지고 있습니다. `Log()`는 호출이 이루어진 파일과 라인, 현재 시간도 같이 출력합니다. 기본적으로 Rich는 파이썬 구조체와 repr string에 대해 신택스 하이라이팅을 지원합니다. 만약 당신이 collection(예를 들어 dict나 list)을 로깅한다면, Rich는 표현 가능한 공간에 맞춰 예쁘게 출력해줍니다. 이러한 기능들에 대한 예시입니다:
 
 ```python
-from rich.console import Console
+from mudrich.console import Console
 console = Console()
 
 test_data = [
@@ -192,8 +192,8 @@ Rich는 유니코드 박스 문자와 함께 [표](https://rich.readthedocs.io/e
 더 간단한 표 예제입니다:
 
 ```python
-from rich.console import Console
-from rich.table import Table
+from mudrich.console import Console
+from mudrich.table import Table
 
 console = Console()
 
@@ -241,7 +241,7 @@ Rich는 오래 걸리는 작업들을 위해 깜빡임 없는 [진행](https://r
 기본적인 사용을 위해선 아무 sequence나 `track` 함수로 감싸고 결과를 반복해주세요. 다음은 예제입니다:
 
 ```python
-from rich.progress import track
+from mudrich.progress import track
 
 for step in track(range(100)):
     do_step(step)
@@ -266,7 +266,7 @@ for step in track(range(100)):
 
 ```python
 from time import sleep
-from rich.console import Console
+from mudrich.console import Console
 
 console = Console()
 tasks = [f"task {n}" for n in range(1, 11)]
@@ -322,8 +322,8 @@ Rich는 내용을 같거나 적절한 폭으로 깔끔하게 [칼럼](https://ri
 import os
 import sys
 
-from rich import print
-from rich.columns import Columns
+from mudrich import print
+from mudrich.columns import Columns
 
 directory = os.listdir(sys.argv[1])
 print(Columns(directory))
@@ -343,8 +343,8 @@ Rich는 [마크다운](https://rich.readthedocs.io/en/latest/markdown.html)을 �
 마크다운을 표현하기 위해서는 `Markdown` 클래스를 import하고 마크다운을 포함하고 있는 문자열을 통해 객체를 생성해주세요. 다음은 예제입니다:
 
 ```python
-from rich.console import Console
-from rich.markdown import Markdown
+from mudrich.console import Console
+from mudrich.markdown import Markdown
 
 console = Console()
 with open("RICH_README.md") as readme:
@@ -364,8 +364,8 @@ console.print(markdown)
 Rich는 [구문 강조](https://rich.readthedocs.io/en/latest/syntax.html) 기능을 수행하기 위해 [pygments](https://pygments.org/) 라이브러리를 사용합니다. 사용법은 마크다운과 유사합니다. `Syntax` 객체를 생성하고 콘솔에 출력하세요. 예제는 다음과 같습니다:
 
 ```python
-from rich.console import Console
-from rich.syntax import Syntax
+from mudrich.console import Console
+from mudrich.syntax import Syntax
 
 my_code = '''
 def iter_first_last(values: Iterable[T]) -> Iterable[Tuple[bool, bool, T]]:

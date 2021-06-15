@@ -1,4 +1,4 @@
-from rich.repr import rich_repr
+from mudrich.repr import rich_repr
 
 
 @rich_repr
@@ -18,7 +18,7 @@ class Bird:
     # __rich_repr__.angular = True
 
 
-from rich import print
+from mudrich import print
 
 BIRDS = {
     "gull": Bird("gull", eats=["fish", "chips", "ice cream", "sausage rolls"]),

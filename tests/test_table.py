@@ -4,11 +4,11 @@ import io
 
 import pytest
 
-from rich import errors
-from rich.console import Console
-from rich.measure import Measurement
-from rich.table import Table, Column
-from rich.text import Text
+from mudrich import errors
+from mudrich.console import Console
+from mudrich.measure import Measurement
+from mudrich.table import Table, Column
+from mudrich.text import Text
 
 
 def render_tables():

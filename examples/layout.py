@@ -8,11 +8,11 @@ from datetime import datetime
 
 from time import sleep
 
-from rich.align import Align
-from rich.console import Console
-from rich.layout import Layout
-from rich.live import Live
-from rich.text import Text
+from mudrich.align import Align
+from mudrich.console import Console
+from mudrich.layout import Layout
+from mudrich.live import Live
+from mudrich.text import Text
 
 console = Console()
 layout = Layout()

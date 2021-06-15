@@ -38,7 +38,7 @@ def reconfigure(*args: Any, **kwargs: Any) -> None:
     Args:
         console (Console): Replacement console instance.
     """
-    from rich.console import Console
+    from mudrich.console import Console
 
     new_console = Console(*args, **kwargs)
     _console.__dict__ = new_console.__dict__
@@ -104,7 +104,7 @@ def inspect(
         value (bool, optional): Pretty print value. Defaults to True.
     """
     _console = console or get_console()
-    from rich._inspect import Inspect
+    from mudrich._inspect import Inspect
 
     # Special case for inspect(inspect)
     is_inspect = obj is inspect

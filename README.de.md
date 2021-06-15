@@ -40,7 +40,7 @@ python -m rich
 Um deiner Anwendung mühelos eine Rich-Ausgabe hinzuzufügen, kannst du die Methode [rich print](https://rich.readthedocs.io/en/latest/introduction.html#quick-start) importieren, die dieselbe Signatur wie die integrierte Python-Funktion hat. Versuche das:
 
 ```python
-from rich import print
+from mudrich import print
 
 print("Hello, [bold magenta]World[/bold magenta]!", ":vampire:", locals())
 ```
@@ -52,7 +52,7 @@ print("Hello, [bold magenta]World[/bold magenta]!", ":vampire:", locals())
 Rich kann in Python REPL installiert werden, so dass alle Datenstrukturen schön ausgegeben und hervorgehoben werden.
 
 ```python
->>> from rich import pretty
+>>> from mudrich import pretty
 >>> pretty.install()
 ```
 
@@ -63,7 +63,7 @@ Rich kann in Python REPL installiert werden, so dass alle Datenstrukturen schön
 Importiere und erstelle ein [Konsolen-Objekt](https://rich.readthedocs.io/en/latest/reference/console.html#rich.console.Console), um mehr Kontrolle über umfangreiche Terminalinhalte zu erhalten.
 
 ```python
-from rich.console import Console
+from mudrich.console import Console
 
 console = Console()
 ```
@@ -102,7 +102,7 @@ Rich hat eine Funktion [inspect](https://rich.readthedocs.io/en/latest/reference
 
 ```python
 >>> my_list = ["foo", "bar"]
->>> from rich import inspect
+>>> from mudrich import inspect
 >>> inspect(my_list, methods=True)
 ```
 
@@ -122,7 +122,7 @@ Klicke auf die folgenden Überschriften, um Details zu erfahren:
 Das Console-Objekt hat eine `log()`-Methode, die die gleiche Schnittstelle wie `print()` hat, aber zusätzlich eine Spalte für die aktuelle Zeit und die Datei und Zeile, die den Aufruf gemacht hat, ausgibt. Standardmäßig führt Rich die Syntaxhervorhebung für Python-Strukturen und für repr-Strings durch. Wenn du eine Sammlung (z.B. ein Diktat oder eine Liste) protokollierst, wird Rich diese so hübsch ausgeben, dass sie in den verfügbaren Platz passt. Hier ein Beispiel für einige dieser Funktionen.
 
 ```python
-from rich.console import Console
+from mudrich.console import Console
 console = Console()
 
 test_data = [
@@ -188,8 +188,8 @@ Die obige Animation wurde mit [table_movie.py](https://github.com/willmcgugan/ri
 Hier ist ein einfacheres Tabellenbeispiel:
 
 ```python
-from rich.console import Console
-from rich.table import Table
+from mudrich.console import Console
+from mudrich.table import Table
 
 console = Console()
 
@@ -237,7 +237,7 @@ Rich kann mehrere flackerfreie [Fortschrittsbalken](https://rich.readthedocs.io/
 Einfachste Anwendung ist, eine beliebige Sequenz in die Funktion `track` einzupacken und  über das Ergebnis zu iterieren. Hier ein Beispiel:
 
 ```python
-from rich.progress import track
+from mudrich.progress import track
 
 for step in track(range(100)):
     do_step(step)
@@ -262,7 +262,7 @@ Für Situationen, in denen es schwierig ist, den Fortschritt zu berechnen, kanns
 
 ```python
 from time import sleep
-from rich.console import Console
+from mudrich.console import Console
 
 console = Console()
 tasks = [f"task {n}" for n in range(1, 11)]
@@ -318,8 +318,8 @@ Rich kann Inhalte sauber in [Spalten](https://rich.readthedocs.io/en/latest/colu
 import os
 import sys
 
-from rich import print
-from rich.columns import Columns
+from mudrich import print
+from mudrich.columns import Columns
 
 directory = os.listdir(sys.argv[1])
 print(Columns(directory))
@@ -339,8 +339,8 @@ Rich kann [Markdown](https://rich.readthedocs.io/en/latest/markdown.html) render
 Um Markdown zu rendern, importiere die Klasse `Markdown` und konstruiere einen String mit Markdown-Code. Gib ihn dann auf der Konsole aus. Hier ein Beispiel:
 
 ```python
-from rich.console import Console
-from rich.markdown import Markdown
+from mudrich.console import Console
+from mudrich.markdown import Markdown
 
 console = Console()
 with open("RICH_README.md") as readme:
@@ -360,8 +360,8 @@ Dies erzeugt diese Ausgabe:
 Rich verwendet die Bibliothek [pygments](https://pygments.org/) zur Implementierung von [Syntax-Hervorhebung](https://rich.readthedocs.io/en/latest/syntax.html). Die Verwendung ist gleich dem Rendern von Markdown; konstruieren Sie ein `Syntax`-Objekt und gib es auf der Konsole aus. Hier ein Beispiel:
 
 ```python
-from rich.console import Console
-from rich.syntax import Syntax
+from mudrich.console import Console
+from mudrich.syntax import Syntax
 
 my_code = '''
 def iter_first_last(values: Iterable[T]) -> Iterable[Tuple[bool, bool, T]]:

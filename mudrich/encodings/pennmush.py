@@ -1,10 +1,10 @@
-from rich.style import Style
+from mudrich.style import Style
 from .base import ProtoStyle
 
 from .colors import COLORS
 from typing import Union, Tuple, List
-from rich.text import Text, Span
-from rich.color import Color
+from mudrich.text import Text, Span
+from mudrich.color import Color
 import html
 import re
 from enum import IntFlag, IntEnum
@@ -403,8 +403,8 @@ def ansi_fun(code: str, text: Union[Text, str]) -> Text:
 
 def ansify(style: Style, text: Union[Text, str]) -> Text:
     if isinstance(text, Text):
-        spans = [Span(s.start, s.end, style + s.style) for s in text.spans]
-        return Text(text.plain, spans=spans)
+        spans = [Span(s.start, s.end, s.style + style) for s in text.spans]
+        return Text(text.plain, spans=spans, style=text.style + style)
     elif isinstance(text, str):
         spans = [Span(0, len(text), style)]
         return Text(text, spans=spans)
@@ -416,8 +416,8 @@ def from_html(text: Union[Text, str], tag: str, **kwargs) -> Text:
     mark.xml_attr = kwargs
     style = mark.convert()
     if isinstance(text, Text):
-        spans = [Span(s.start, s.end, style + s.style) for s in text.spans]
-        return Text(text.plain, spans=spans)
+        spans = [Span(s.start, s.end, s.style + style) for s in text.spans]
+        return Text(text.plain, spans=spans, style=text.style + style)
     elif isinstance(text, str):
         spans = [Span(0, len(text), mark.convert())]
         return Text(text, spans=spans)

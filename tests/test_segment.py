@@ -1,8 +1,8 @@
 import sys
 
-from rich.segment import ControlType
-from rich.segment import Segment, Segments
-from rich.style import Style
+from mudrich.segment import ControlType
+from mudrich.segment import Segment, Segments
+from mudrich.style import Style
 
 
 def test_repr():

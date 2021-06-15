@@ -1,6 +1,6 @@
 import re
 from ..patches.style import MudStyle, ProtoStyle
-from rich.text import Text
+from mudrich.text import Text
 from typing import Union, List, Tuple, Iterable, Optional
 from collections import defaultdict
 

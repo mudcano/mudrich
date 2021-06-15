@@ -2,8 +2,8 @@
 This example demonstrates the justify argument to print.
 """
 
-from rich.console import Console
-from rich.panel import Panel
+from mudrich.console import Console
+from mudrich.panel import Panel
 
 console = Console(width=20)
 

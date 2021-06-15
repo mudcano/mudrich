@@ -40,10 +40,10 @@ if __name__ == "__main__":
         ],
     )
 
-    from rich.console import Console
-    from rich.pretty import Pretty
-    from rich.table import Column, Table
-    from rich.text import Text
+    from mudrich.console import Console
+    from mudrich.pretty import Pretty
+    from mudrich.table import Column, Table
+    from mudrich.text import Text
 
     console = Console()
 

@@ -1,4 +1,4 @@
-from rich._pick import pick_bool
+from mudrich._pick import pick_bool
 
 
 def test_pick_bool():

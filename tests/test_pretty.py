@@ -8,8 +8,8 @@ from typing import List
 import attr
 import pytest
 
-from rich.console import Console
-from rich.pretty import install, Pretty, pprint, pretty_repr, Node
+from mudrich.console import Console
+from mudrich.pretty import install, Pretty, pprint, pretty_repr, Node
 
 
 skip_py36 = pytest.mark.skipif(

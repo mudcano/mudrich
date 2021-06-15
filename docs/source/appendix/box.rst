@@ -5,7 +5,7 @@ Box
 
 Rich has a number of constants that set the box characters used to draw tables and panels. To select a box style import one of the constants below from ``rich.box``. For example::
 
-    from rich import box
+    from mudrich import box
     table = Table(box=box.SQUARE)
 
 

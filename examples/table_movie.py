@@ -2,13 +2,13 @@
 import time
 from contextlib import contextmanager
 
-from rich import box
-from rich.align import Align
-from rich.console import Console
-from rich.live import Live
-from rich.measure import Measurement
-from rich.table import Table
-from rich.text import Text
+from mudrich import box
+from mudrich.align import Align
+from mudrich.console import Console
+from mudrich.live import Live
+from mudrich.measure import Measurement
+from mudrich.table import Table
+from mudrich.text import Text
 
 TABLE_DATA = [
     [

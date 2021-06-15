@@ -2,9 +2,9 @@ import io
 
 import pytest
 
-from rich.console import Console
-from rich.rule import Rule
-from rich.text import Text
+from mudrich.console import Console
+from mudrich.rule import Rule
+from mudrich.text import Text
 
 
 def test_rule():

@@ -1,7 +1,7 @@
 import re
-from rich.text import Text
+from mudrich.text import Text
 from ..patches.style import MudStyle, ProtoStyle
-from rich.color import Color
+from mudrich.color import Color
 from typing import Union, List, Tuple
 
 

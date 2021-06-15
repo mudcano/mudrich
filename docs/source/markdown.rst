@@ -11,8 +11,8 @@ Rich can render Markdown to the console. To render markdown, construct a :class:
     1. This is a list item
     2. This is another list item
     """
-    from rich.console import Console
-    from rich.markdown import Markdown
+    from mudrich.console import Console
+    from mudrich.markdown import Markdown
 
     console = Console()
     md = Markdown(MARKDOWN)

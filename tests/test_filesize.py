@@ -1,4 +1,4 @@
-from rich import filesize
+from mudrich import filesize
 
 
 def test_traditional():

@@ -5,10 +5,10 @@ import sys
 import time
 from dataclasses import dataclass
 
-from rich import box
-from rich.console import Console
-from rich.live import Live
-from rich.table import Table
+from mudrich import box
+from mudrich.console import Console
+from mudrich.live import Live
+from mudrich.table import Table
 
 if sys.version_info >= (3, 8):
     from typing import Literal

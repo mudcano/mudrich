@@ -171,8 +171,8 @@ def render(markup: str, style: Union[str, Style] = "", emoji: bool = True) -> Te
 
 if __name__ == "__main__":  # pragma: no cover
 
-    from rich.console import Console
-    from rich.text import Text
+    from mudrich.console import Console
+    from mudrich.text import Text
 
     console = Console(highlight=False)
 
@@ -180,7 +180,7 @@ if __name__ == "__main__":  # pragma: no cover
     console.print("foo")
     console.print("Hello [link=https://www.willmcgugan.com]W[b red]o[/]rld[/]!")
 
-    from rich import print
+    from mudrich import print
 
     print(escape("[red]"))
     print(escape(r"\[red]"))

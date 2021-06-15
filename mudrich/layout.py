@@ -26,7 +26,7 @@ from .segment import Segment
 from .style import StyleType
 
 if TYPE_CHECKING:
-    from rich.tree import Tree
+    from mudrich.tree import Tree
 
 
 class LayoutRender(NamedTuple):
@@ -223,9 +223,9 @@ class Layout:
     @property
     def tree(self) -> "Tree":
         """Get a tree renderable to show layout structure."""
-        from rich.styled import Styled
-        from rich.table import Table
-        from rich.tree import Tree
+        from mudrich.styled import Styled
+        from mudrich.table import Table
+        from mudrich.tree import Tree
 
         def summary(layout: "Layout") -> Table:
 
@@ -418,7 +418,7 @@ class Layout:
 
 
 if __name__ == "__main__":
-    from rich.console import Console
+    from mudrich.console import Console
 
     console = Console()
     layout = Layout()

@@ -1,7 +1,7 @@
-from rich.console import Console
-from rich.containers import Lines, Renderables
-from rich.text import Span, Text
-from rich.style import Style
+from mudrich.console import Console
+from mudrich.containers import Lines, Renderables
+from mudrich.text import Span, Text
+from mudrich.style import Style
 
 
 def test_renderables_measure():

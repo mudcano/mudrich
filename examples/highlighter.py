@@ -2,9 +2,9 @@
 This example demonstrates a simple text highlighter.
 """
 
-from rich.console import Console
-from rich.highlighter import RegexHighlighter
-from rich.theme import Theme
+from mudrich.console import Console
+from mudrich.highlighter import RegexHighlighter
+from mudrich.theme import Theme
 
 
 class EmailHighlighter(RegexHighlighter):

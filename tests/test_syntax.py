@@ -6,9 +6,9 @@ import os, tempfile
 import pytest
 from .render import render
 
-from rich.panel import Panel
-from rich.style import Style
-from rich.syntax import Syntax, ANSISyntaxTheme, PygmentsSyntaxTheme, Color, Console
+from mudrich.panel import Panel
+from mudrich.style import Style
+from mudrich.syntax import Syntax, ANSISyntaxTheme, PygmentsSyntaxTheme, Color, Console
 
 
 CODE = '''\

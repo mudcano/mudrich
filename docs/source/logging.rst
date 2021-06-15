@@ -6,7 +6,7 @@ Rich supplies a :ref:`logging handler<logging>` which will format and colorize t
 Here's an example of how to set up a rich logger::
 
     import logging
-    from rich.logging import RichHandler
+    from mudrich.logging import RichHandler
 
     FORMAT = "%(message)s"
     logging.basicConfig(
@@ -28,7 +28,7 @@ The :class:`~rich.logging.RichHandler` class may be configured to use Rich's :cl
 
 
     import logging
-    from rich.logging import RichHandler
+    from mudrich.logging import RichHandler
 
     logging.basicConfig(
         level="NOTSET",

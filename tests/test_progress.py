@@ -5,10 +5,10 @@ from time import sleep
 
 import pytest
 
-from rich.progress_bar import ProgressBar
-from rich.console import Console
-from rich.highlighter import NullHighlighter
-from rich.progress import (
+from mudrich.progress_bar import ProgressBar
+from mudrich.console import Console
+from mudrich.highlighter import NullHighlighter
+from mudrich.progress import (
     BarColumn,
     FileSizeColumn,
     TotalFileSizeColumn,
@@ -25,7 +25,7 @@ from rich.progress import (
     _TrackThread,
     TaskID,
 )
-from rich.text import Text
+from mudrich.text import Text
 
 
 class MockClock:

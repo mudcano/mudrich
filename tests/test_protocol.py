@@ -1,9 +1,9 @@
 import io
 
-from rich.abc import RichRenderable
-from rich.console import Console
-from rich.panel import Panel
-from rich.text import Text
+from mudrich.abc import RichRenderable
+from mudrich.console import Console
+from mudrich.panel import Panel
+from mudrich.text import Text
 
 
 class Foo:

@@ -2,8 +2,8 @@
 Demonstrates how to render a table.
 """
 
-from rich.console import Console
-from rich.table import Table
+from mudrich.console import Console
+from mudrich.table import Table
 
 table = Table(title="Star Wars Movies")
 

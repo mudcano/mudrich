@@ -1,10 +1,10 @@
 from io import StringIO
 import pytest
 
-from rich.console import Console
-from rich.text import Span, Text
-from rich.measure import Measurement
-from rich.style import Style
+from mudrich.console import Console
+from mudrich.text import Span, Text
+from mudrich.measure import Measurement
+from mudrich.style import Style
 
 
 def test_span():

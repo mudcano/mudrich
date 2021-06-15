@@ -1,4 +1,4 @@
-from rich._stack import Stack
+from mudrich._stack import Stack
 
 
 def test_stack():

@@ -4,9 +4,9 @@ import time
 from typing import Optional
 
 # import pytest
-from rich.console import Console
-from rich.text import Text
-from rich.live import Live
+from mudrich.console import Console
+from mudrich.text import Text
+from mudrich.live import Live
 
 
 def create_capture_console(

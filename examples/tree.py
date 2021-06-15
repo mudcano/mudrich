@@ -6,11 +6,11 @@ import os
 import pathlib
 import sys
 
-from rich import print
-from rich.filesize import decimal
-from rich.markup import escape
-from rich.text import Text
-from rich.tree import Tree
+from mudrich import print
+from mudrich.filesize import decimal
+from mudrich.markup import escape
+from mudrich.text import Text
+from mudrich.tree import Tree
 
 
 def walk_directory(directory: pathlib.Path, tree: Tree) -> None:

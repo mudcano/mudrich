@@ -434,11 +434,11 @@ class Segments:
 
 
 if __name__ == "__main__":  # pragma: no cover
-    from rich.syntax import Syntax
-    from rich.text import Text
-    from rich.console import Console
+    from mudrich.syntax import Syntax
+    from mudrich.text import Text
+    from mudrich.console import Console
 
-    code = """from rich.console import Console
+    code = """from mudrich.console import Console
 console = Console()
 text = Text.from_markup("Hello, [bold magenta]World[/]!")
 console.print(text)"""

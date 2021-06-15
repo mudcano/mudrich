@@ -7,9 +7,9 @@ The data is pulled from https://randomuser.me
 import json
 from urllib.request import urlopen
 
-from rich.console import Console
-from rich.columns import Columns
-from rich.panel import Panel
+from mudrich.console import Console
+from mudrich.columns import Columns
+from mudrich.panel import Panel
 
 
 def get_content(user):

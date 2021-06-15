@@ -3,8 +3,8 @@ import os
 import logging
 import pytest
 
-from rich.console import Console
-from rich.logging import RichHandler
+from mudrich.console import Console
+from mudrich.logging import RichHandler
 
 handler = RichHandler(
     console=Console(

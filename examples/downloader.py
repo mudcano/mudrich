@@ -11,7 +11,7 @@ from threading import Event
 from typing import Iterable
 from urllib.request import urlopen
 
-from rich.progress import (
+from mudrich.progress import (
     BarColumn,
     DownloadColumn,
     Progress,

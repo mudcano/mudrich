@@ -1,8 +1,8 @@
 import json
 import io
 from time import time
-from rich.console import Console
-from rich.pretty import Pretty
+from mudrich.console import Console
+from mudrich.pretty import Pretty
 
 
 console = Console(file=io.StringIO(), color_system="truecolor", width=100)

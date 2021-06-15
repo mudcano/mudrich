@@ -3,8 +3,8 @@ import sys
 
 import pytest
 
-from rich.console import Console
-from rich.traceback import install, Traceback
+from mudrich.console import Console
+from mudrich.traceback import install, Traceback
 
 # from .render import render
 

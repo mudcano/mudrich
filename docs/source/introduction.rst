@@ -36,7 +36,7 @@ Quick Start
 
 The quickest way to get up and running with Rich is to import the alternative ``print`` function which takes the same arguments as the built-in ``print`` and may be used as a drop-in replacement. Here's how you would do that::
 
-    from rich import print
+    from mudrich import print
 
 You can then print strings or objects to the terminal in the usual way. Rich will do some basic syntax highlighting and format data structures to make them easier to read.
 
@@ -65,7 +65,7 @@ This writes the following output to the terminal (including all the colors and s
 
 If you would rather not shadow Python's builtin print, you can import ``rich.print`` as ``rprint`` (for example)::
 
-    from rich import print as rprint
+    from mudrich import print as rprint
 
 Continue reading to learn about the more advanced features of Rich.
 
@@ -74,13 +74,13 @@ Rich in the REPL
 
 Rich may be installed in the REPL so that Python data structures are automatically pretty printed with syntax highlighting. Here's how::
 
-    >>> from rich import pretty
+    >>> from mudrich import pretty
     >>> pretty.install() 
     >>> ["Rich and pretty", True]
 
 You can also use this feature to try out Rich *renderables*. Here's an example::
 
-    >>> from rich.panel import Panel
+    >>> from mudrich.panel import Panel
     >>> Panel.fit("[bold yellow]Hi, I'm a Panel", border_style="red")
 
 Read on to learn more about Rich renderables.
@@ -100,7 +100,7 @@ Rich Inspect
 
 Rich has an :meth:`~rich.inspect` function which can generate a report on any Python object. It is a fantastic debug aid, and a good example of the output that Rich can generate. Here is a simple example::
 
-    >>> from rich import inspect
-    >>> from rich.color import Color
+    >>> from mudrich import inspect
+    >>> from mudrich.color import Color
     >>> color = Color.parse("red")
     >>> inspect(color, methods=True)

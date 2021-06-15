@@ -2,7 +2,7 @@ import subprocess
 from typing import List, Tuple
 import sys
 
-from rich.progress import Progress
+from mudrich.progress import Progress
 
 from wcwidth import wcwidth
 

@@ -5,15 +5,15 @@ Demonstrates a Rich "application" using the Layout and Live classes.
 
 from datetime import datetime
 
-from rich import box
-from rich.align import Align
-from rich.console import Console, RenderGroup
-from rich.layout import Layout
-from rich.panel import Panel
-from rich.progress import Progress, SpinnerColumn, BarColumn, TextColumn
-from rich.syntax import Syntax
-from rich.table import Table
-from rich.text import Text
+from mudrich import box
+from mudrich.align import Align
+from mudrich.console import Console, RenderGroup
+from mudrich.layout import Layout
+from mudrich.panel import Panel
+from mudrich.progress import Progress, SpinnerColumn, BarColumn, TextColumn
+from mudrich.syntax import Syntax
+from mudrich.table import Table
+from mudrich.text import Text
 
 console = Console()
 
@@ -170,7 +170,7 @@ layout["box1"].update(Panel(layout.tree, border_style="red"))
 layout["footer"].update(progress_table)
 
 
-from rich.live import Live
+from mudrich.live import Live
 from time import sleep
 
 with Live(layout, refresh_per_second=10, screen=True):

@@ -1,5 +1,5 @@
-from rich.control import Control, strip_control_codes
-from rich.segment import Segment, ControlType
+from mudrich.control import Control, strip_control_codes
+from mudrich.segment import Segment, ControlType
 
 
 def test_control():

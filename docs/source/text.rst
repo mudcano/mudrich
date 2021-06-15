@@ -9,8 +9,8 @@ You can consider this class to be like a string with marked up regions of text. 
 
 One way to add a style to Text is the :meth:`~rich.text.Text.stylize` method which applies a style to a start and end offset. Here is an example::
 
-    from rich.console import Console
-    from rich.text import Text
+    from mudrich.console import Console
+    from mudrich.text import Text
 
     console = Console()
     text = Text("Hello, World!")
@@ -46,9 +46,9 @@ The Text class has a number of parameters you can set on the constructor to modi
 
 A Text instance may be used in place of a plain string virtually everywhere in the Rich API, which gives you a lot of control in how text renders within other Rich renderables. For instance, the following example right aligns text within a :class:`~rich.panel.Panel`::
 
-    from rich import print
-    from rich.panel import Panel
-    from rich.text import Text
+    from mudrich import print
+    from mudrich.panel import Panel
+    from mudrich.text import Text
     panel = Panel(Text("Hello", justify="right"))
     print(panel)
 

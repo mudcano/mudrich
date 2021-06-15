@@ -1,7 +1,7 @@
 import io
 
 import rich
-from rich.console import Console
+from mudrich.console import Console
 
 
 def test_get_console():

@@ -1,9 +1,9 @@
 import sys
 import pytest
 
-from rich.console import Console
-from rich.layout import Layout, NoSplitter
-from rich.panel import Panel
+from mudrich.console import Console
+from mudrich.layout import Layout, NoSplitter
+from mudrich.panel import Panel
 
 
 def test_no_layout():

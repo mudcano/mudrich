@@ -7,8 +7,8 @@ To render a table, construct a :class:`~rich.table.Table` object, add columns wi
 
 Here's an example::
 
-    from rich.console import Console
-    from rich.table import Table
+    from mudrich.console import Console
+    from mudrich.table import Table
 
     table = Table(title="Star Wars Movies")
 
@@ -44,7 +44,7 @@ Rich is quite smart about rendering the table. It will adjust the column widths 
 
 You can set the border style by importing one of the preset :class:`~rich.box.Box` objects and setting the ``box`` argument in the table constructor. Here's an example that modifies the look of the Star Wars table::
 
-    from rich import box
+    from mudrich import box
     table = Table(title="Star Wars Movies", box=box.MINIMAL_DOUBLE_HEAD)
 
 See :ref:`appendix_box` for other box styles.
@@ -72,7 +72,7 @@ You may also add columns by specifying them in the positional arguments of the :
 
 This allows you to specify the text of the column only. If you want to set other attributes, such as width and style, you can add an :class:`~rich.table.Column` class. Here's an example::
 
-    from rich.table import Column
+    from mudrich.table import Column
     table = Table(
         "Released",
         "Title",
@@ -93,8 +93,8 @@ The Table class can also make a great layout tool. If you disable headers and bo
 For instance, the following code displays two pieces of text aligned to both the left and right edges of the terminal on a single line::
 
 
-    from rich import print
-    from rich.table import Table
+    from mudrich import print
+    from mudrich.table import Table
 
     grid = Table.grid(expand=True)
     grid.add_column()

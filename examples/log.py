@@ -3,10 +3,10 @@ A simulation of Rich console logging.
 """
 
 import time
-from rich.console import Console
-from rich.style import Style
-from rich.theme import Theme
-from rich.highlighter import RegexHighlighter
+from mudrich.console import Console
+from mudrich.style import Style
+from mudrich.theme import Theme
+from mudrich.highlighter import RegexHighlighter
 
 
 class RequestHighlighter(RegexHighlighter):

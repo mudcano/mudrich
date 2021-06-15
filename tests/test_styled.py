@@ -1,8 +1,8 @@
 import io
 
-from rich.console import Console
-from rich.measure import Measurement
-from rich.styled import Styled
+from mudrich.console import Console
+from mudrich.measure import Measurement
+from mudrich.styled import Styled
 
 
 def test_styled():

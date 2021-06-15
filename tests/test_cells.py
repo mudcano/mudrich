@@ -1,4 +1,4 @@
-from rich import cells
+from mudrich import cells
 
 
 def test_set_cell_size():

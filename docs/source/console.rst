@@ -3,7 +3,7 @@ Console API
 
 For complete control over terminal formatting, Rich offers a :class:`~rich.console.Console` class. Most applications will require a single Console instance, so you may want to create one at the module level or as an attribute of your top-level object. For example, you  could add a file called "console.py" to your project::
 
-    from rich.console import Console
+    from mudrich.console import Console
     console = Console()
 
 Then you can import the console from anywhere in your project like this::
@@ -121,7 +121,7 @@ Both print and log support a ``justify`` argument which if set must be one of "d
 
 The default for ``justify`` is ``"default"`` which will generally look the same as ``"left"`` but with a subtle difference. Left justify will pad the right of the text with spaces, while a default justify will not. You will only notice the difference if you set a background color with the ``style`` argument. The following example demonstrates the difference::
 
-    from rich.console import Console
+    from mudrich.console import Console
 
     console = Console(width=20)
 
@@ -156,7 +156,7 @@ The "ellipsis" method is similar to "crop", but will insert an ellipsis characte
 The following code demonstrates the basic overflow methods::
 
     from typing import List
-    from rich.console import Console, OverflowMethod
+    from mudrich.console import Console, OverflowMethod
 
     console = Console(width=14)
     supercali = "supercalifragilisticexpialidocious"
@@ -192,7 +192,7 @@ Console style
 
 The Console has a ``style`` attribute which you can use to apply a style to everything you print. By default ``style`` is None meaning no extra style is applied, but you can set it to any valid style. Here's an example of a Console with a style attribute set::
 
-    from rich.console import Console
+    from mudrich.console import Console
     blue_console = Console(style="white on blue")
     blue_console.print("I'm blue. Da ba dee da ba di.")
 
@@ -217,7 +217,7 @@ Input
 
 The console class has an :meth:`~rich.console.Console.input` which works in the same way as Python's builtin ``input()`` method, but can use anything that Rich can print as a prompt. For example, here's a colorful prompt with an emoji::
 
-    from rich.console import Console
+    from mudrich.console import Console
     console = Console()
     console.input("What is [i]your[/i] [bold red]name[/]? :smiley: ")
 
@@ -226,7 +226,7 @@ Exporting
 
 The Console class can export anything written to it as either text or html. To enable exporting, first set ``record=True`` on the constructor. This tells Rich to save a copy of any data you ``print()`` or ``log()``. Here's an example::
 
-    from rich.console import Console
+    from mudrich.console import Console
     console = Console(record=True)
 
 After you have written content, you can call :meth:`~rich.console.Console.export_text` or :meth:`~rich.console.Console.export_html` to get the console output as a string. You can also call :meth:`~rich.console.Console.save_text` or :meth:`~rich.console.Console.save_html` to write the contents directly to disk.
@@ -238,7 +238,7 @@ Error console
 
 The Console object will write to ``sys.stdout`` by default (so that you see output in the terminal). If you construct the Console with ``stderr=True`` Rich will write to ``sys.stderr``. You may want to use this to create an *error console* so you can split error messages from regular output. Here's an example::
 
-    from rich.console import Console    
+    from mudrich.console import Console
     error_console = Console(stderr=True)
 
 You might also want to set the ``style`` parameter on the Console to make error messages visually distinct. Here's how you might do that::
@@ -251,7 +251,7 @@ File output
 You can also tell the Console object to write to a file by setting the ``file`` argument on the constructor -- which should be a file-like object opened for writing text. You could use this to write to a file without the output ever appearing on the terminal. Here's an example::
 
     import sys
-    from rich.console import Console
+    from mudrich.console import Console
     from datetime import datetime
 
     with open("report.txt", "wt") as report_file:
@@ -265,7 +265,7 @@ Capturing output
 
 There may be situations where you want to *capture* the output from a Console rather than writing it directly to the terminal. You can do this with the :meth:`~rich.console.Console.capture` method which returns a context manager. On exit from this context manager, call :meth:`~rich.console.Capture.get` to return the string that would have been written to the terminal. Here's an example::
 
-    from rich.console import Console
+    from mudrich.console import Console
     console = Console()
     with console.capture() as capture:
         console.print("[bold red]Hello[/] World")
@@ -274,7 +274,7 @@ There may be situations where you want to *capture* the output from a Console ra
 An alternative way of capturing output is to set the Console file to a :py:class:`io.StringIO`. This is the recommended method if you are testing console output in unit tests. Here's an example::
 
     from io import StringIO
-    from rich.console import Console
+    from mudrich.console import Console
     console = Console(file=StringIO())
     console.print("[bold red]Hello[/] World")
     str_output = console.file.getvalue()
@@ -286,8 +286,8 @@ If you have some long output to present to the user you can use a *pager* to dis
 
 You can page output from a Console by calling :meth:`~rich.console.Console.pager` which returns a context manger. When the pager exits, anything that was printed will be sent to the pager. Here's an example::
 
-    from rich.__main__ import make_test_card
-    from rich.console import Console
+    from mudrich.__main__ import make_test_card
+    from mudrich.console import Console
 
     console = Console()
     with console.pager():
@@ -309,7 +309,7 @@ Terminals support an 'alternate screen' mode which is separate from the regular 
 Here's an example of an alternate screen::
 
     from time import sleep
-    from rich.console import Console
+    from mudrich.console import Console
 
     console = Console()
     with console.screen():
@@ -324,10 +324,10 @@ Here's an example::
 
     from time import sleep
 
-    from rich.console import Console
-    from rich.align import Align
-    from rich.text import Text
-    from rich.panel import Panel
+    from mudrich.console import Console
+    from mudrich.align import Align
+    from mudrich.text import Text
+    from mudrich.panel import Panel
 
     console = Console()
 

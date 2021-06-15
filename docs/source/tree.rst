@@ -9,8 +9,8 @@ Run the following command to see a demonstration of a Rich tree::
 
 The following code creates and prints a tree with a simple text label::
 
-    from rich.tree import Tree
-    from rich import print
+    from mudrich.tree import Tree
+    from mudrich import print
 
     tree = Tree("Rich Tree")
     print(tree)
